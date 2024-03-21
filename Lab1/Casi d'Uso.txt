@@ -1,0 +1,49 @@
+Il sistema rubrica può essere utilizzato da due utenze:
+
+	-	Utente
+	-	Amministratore
+
+Il sistema deve garantire le seguenti operazioni ad entrambi gli utenti:
+
+	-	InserisciContatto: permette di inserire un nuovo contatto nella 
+		rubrica immettendo caratterizzato da un nome univoco, una descrizione, 
+		e uno o più numeri di telefono.
+
+		-	InserisciContattoProtetto: l'inserimento di un contatto protetto
+			permette di inserire un contatto non cancellabile.
+
+		-	ErroreInserimento: qualora si cercasse di inserire un qualsiasi
+			tipo di contatto (protetto o non) con un nome già esistente, il 
+			sistema restituisce un errore dato che i nomi devono essere
+			univoci.
+
+	-	AggiornaContatto: permette la modifica dei dati di un contatto.
+
+	-	RimuoviContatto: permette di eliminare un contatto presente
+		all'interno della rubrica, solamente se non protetto. Prima di 
+		effettuare la cancellazione, il sistema effettua un controllo 
+		verificando che il contatto non sia protetto. Se si cerca di
+		cancellare un contatto protetto, il sistema restituisce un errore.
+
+	-	RicercaContatto: la ricerca di un contatto può essere effettuata sia 
+		da un utente normale, sia da un amministratore di sistema. Essa si 
+		differenzia per due tipologie:
+
+		-	RicercaPerNome: viene effetuata una ricerca all'interno della 
+			rubrica tramite il nome del contatto. Qualora il contatto non 
+			venisse trovato, il sistema segnala un errore.
+
+		-	RicercaPerNome: viene effetuata una ricerca all'interno della 
+			rubrica tramite il numero del contatto. Qualora il contatto non 
+			venisse trovato, il sistema segnala un errore.
+
+			-	ContattoNonTrovato: il sistema deve segnalare all'utilizzatore
+				la mancata esistenza del numero telefonico o del nome del 
+				contatto cercato, a seconda del caso.
+
+L'operazione di sistema riservata solamente all'amministratore è la seguente:
+
+	-	MonitoraAttività: il monitoraggio delle attività permette
+		all'amministratore controllare l'operato degli utenti nella rubrica, 
+		potendo quindi tenere traccia delle varie operazioni effettuate dagli 
+		utenti.
